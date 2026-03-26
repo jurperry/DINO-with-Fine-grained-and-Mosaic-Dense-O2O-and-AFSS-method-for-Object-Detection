@@ -1,0 +1,2 @@
+# DINO-with-Fine-grained-and-Mosaic-Dense-O2O-and-AFSS-method-for-Object-Detection
+The new model introduces the gated attention mechanism to Multi-Scale Deformable Attention, we can use pre norm method and large learning rate, improve the training stability and performance.Use mosaic to improve the training performance. And AFSS is a way to training much faster then before without losing performance.

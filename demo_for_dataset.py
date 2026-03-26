@@ -6,15 +6,9 @@ import matplotlib.pyplot as plt
 import torch
 
 if __name__ == "__main__":
-    imgdir_path = r"E:\python_project\paper_project\pothole_imgs\img0301\img07_filtered"
-    txtdir_path = r"E:\python_project\paper_project\pothole_imgs\img0301\img07_labels"
-    
-    # imgdir_path = r"E:\python_project\machine_learning01\DetectionTransformer\images\train"
-    # txtdir_path = r"E:\python_project\machine_learning01\DetectionTransformer\labels\train"
+    imgdir_path = "your/path/to/images"
+    txtdir_path = "your/path/to/yolo_like/txt"
 
-    # imgdir_path = r"E:\python_project\paper_project\deformable_detr_yolo\yolo_sign3\images\train"
-    # txtdir_path = r"E:\python_project\paper_project\deformable_detr_yolo\yolo_sign3\labels\train"
-    
     my_dataset = TrainDataset_for_DETR(
         imgdir_path=imgdir_path,  # 替换为实际路径
         txtdir_path=txtdir_path,  # 替换为实际路径

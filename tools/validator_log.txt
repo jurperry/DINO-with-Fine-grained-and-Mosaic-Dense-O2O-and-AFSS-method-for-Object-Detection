@@ -1,0 +1,6 @@
+# mAP计算逻辑, 只收集验证集存在的类别进行计算
+# 使用贪心匹配greedy matching algorithm
+# (1) 该类别下: pred_box, gt_box均存在, 正常计算tp, fp
+# (2) 该类别下: pred_box=[], gt_box存在, 漏检, 通过total_gt计算fn
+# (3) 该类别下: pred_box存在, gt_box=[], 误检, 直接标记为fp
+# (4) 该类别下: pred_box=[], gt_box=[], 说明检测正常无需担忧(不做标记)

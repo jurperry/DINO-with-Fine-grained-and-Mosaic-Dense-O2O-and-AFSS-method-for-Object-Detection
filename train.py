@@ -18,10 +18,10 @@ from utils import collate_fn, build_optimizer_and_scheduler, get_total_grad_norm
 from val import validate_model, printer_eval
 from tools import empty_filter
 
-# coco_tiny 80 class 500 train 500val
-# python train.py --config configs\coco_tiny.yaml --epochs 50 -bs 2 -nc 80 -nq 300 -lr 2e-4 -lr_backbone 2e-5 -gate_attn -pm
-# --resume "E:\python_project\paper_project\AFSS_DINO\results\coco_tiny\last_checkpoint.pth"
-# --tuning "E:\python_project\paper_project\gated_fine_dino\results\pretrained\best_checkpoint.pth"
+# coco80
+# python train.py --config configs\coco80.yaml --epochs 50 -bs 2 -nc 80 -nq 300 -lr 2e-4 -lr_backbone 2e-5 -gate_attn -pm
+# --resume "your/path/to/last_checkpoint.pth"
+# --tuning "your/path/to/pretrained/best_checkpoint.pth"
 
 def set_seed(seed=42):
     import os

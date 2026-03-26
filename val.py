@@ -349,3 +349,35 @@ def printer_eval(val_metrics, all_p50, all_r50, all_score50, map50, map75, map50
     print(f"Average Precision (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = {map50:.3f}")
     print(f"Average Precision (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = {map75:.3f}")
     return None
+
+if __name__ == '__main__':
+    # 数据集路径
+    imgdir_path = "your/val/or/test/image/path"
+    txtdir_path = "your/val/or/test/yolo_like/txt/path" 
+    model_path = "your/model/path/to/best_checkpoint.pth"
+
+    # 配置参数
+    num_classes = 80 # 记得改参数
+    num_queries = 300 # 默认查询数量
+    val_metrics, all_p50, all_r50, all_score50, \
+    map50, map75, map50t95, _, _, _, _, _,\
+        _, _  = validate_model(imgdir_path, 
+                               txtdir_path, 
+                               seed_worker, 
+                               model_path, 
+                               seed=42,      
+                               num_classes=num_classes, 
+                               scores_threshold=0.001, 
+                               num_queries=num_queries, 
+                               batch_size=2, 
+                               workers=0, 
+                               gate_attn=True, 
+                               pin_memory=True,
+                               compute_loss=False, 
+                               drawing=True, # 绘制混淆矩阵, PR曲线, F1曲线
+                               use_ema=True,
+                               max_size=640,
+                               val_size=640,
+                                )
+    
+    printer_eval(val_metrics, all_p50, all_r50, all_score50, map50, map75, map50t95)

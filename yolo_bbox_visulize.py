@@ -189,12 +189,12 @@ def draw_yolo_boxes(image_dir, label_dir, output_dir, class_names=None):
 
 if __name__ == "__main__":
     # 设置您的路径
-    imgdir_path = r"E:\python_project\paper_project\gated_fine_dino\pothole_damage\images\test"
-    txtdir_path = r"E:\python_project\paper_project\gated_fine_dino\pothole_damage\labels\test"
-    output_dir = r"E:\python_project\paper_project\gated_fine_dino\pothole_damage\true_bbox_test"
+    imgdir_path = "your/image/path"
+    txtdir_path = "your/yolo_like/txt/path"
+    output_dir = "true_boxes_plot/output/path"
     
     # 如果有类别名称, 可以在这里提供name list
-    class_names = ['Pothole', 'Repaired Pothole']
+    class_names = ['class 0 ', 'class 1', ...]
     # class_names = None  # 如果没有类别名称，设为None
     
     # 调用函数

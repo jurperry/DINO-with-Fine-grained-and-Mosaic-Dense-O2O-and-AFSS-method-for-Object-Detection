@@ -4,8 +4,8 @@ from torch.utils.data import DataLoader
 from models import GatedAttention_FineGrained_DINO_Swin
 
 if __name__ == '__main__':
-    imgdir_path = r"E:\python_project\machine_learning01\DetectionTransformer\images\train"
-    txtdir_path = r"E:\python_project\machine_learning01\DetectionTransformer\labels\train"
+    imgdir_path = "your/image/path"
+    txtdir_path = "your/label/path"
     batch_size = 2
     
     mydataset = TrainDataset_for_DETR(imgdir_path, txtdir_path, image_set="train")

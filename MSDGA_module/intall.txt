@@ -1,0 +1,2 @@
+python setup.py build install
+# 注意: Linux系统对C++组件扩展支持较为完善, Windows需要自行下载C++扩展组件以进行编译

@@ -1,1 +1,43 @@
+# for coco80
+paths:
+  train_imgdir: your/images/for/train/path
+  train_txtdir: your/labels/for/train/path
+  val_imgdir: your/images/for/val/path
+  val_txtdir: your/labels/for/val/path
+  model_best_path: results/coco80/best_checkpoint.pth
+  model_last_path: results/coco80/last_checkpoint.pth
 
+# notice:
+#   val_size = max(scales), 
+#   max_size is the longest side of the image
+#   scales is the short side of the image, must be the multiple of 32
+#   mosaic_probability is the probability of using mosaic data augmentation,
+#                       default is 0.5（moasaic_prob = 1.0 may cause performance decrease） 
+#   mosaic_ratio = mosaic_aug_epochs / ordinary_aug_epochs
+
+# training configs
+training:
+  num_classes: 80
+  num_queries: 100
+  num_workers: 0
+  batch_size: 2
+  epochs: 50
+  learning_rate: 0.0002
+  learning_rate_backbone: 0.00002
+  learning_rate_proj_mult: 0.1
+  weight_decay: 0.0001
+  scores_threshold: 0.001
+  device: "cuda"
+  pin_memory: True
+  cls_loss_method: 'mal'
+  scales: [480, 512, 544, 576, 608, 640]
+  max_size: 640
+  val_size: 640
+  mosaic_prob: 0.5
+  mosaic_ratio: 0.625
+  warmup_epochs: 0
+  final_finetune_epochs: 0
+  ema_decay: 0.9999
+  ema_warmups: 1000
+  ema_start: 0
+  use_ema: True

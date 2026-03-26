@@ -284,81 +284,15 @@ def predict_func(imgdir,
 
 if __name__ =="__main__":
     # 文件读取区
-    # sign3_small
-    # class_file = r"E:\python_project\machine_learning02\DEIM-main\SignTest\classes.txt"
-    # test_imgdir = r"E:\python_project\machine_learning02\DEIM-main\SignTest\images"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\signtest"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\sign_small\best_checkpoint.pth"
-
-    # class_file = r"E:\python_project\paper_project\deformable_detr\signtest\classes.txt"
-    # test_imgdir = r"E:\python_project\machine_learning02\DEIM-main\SignVal\images"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\signval"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\sign_big\best_checkpoint.pth"
-
-    # class_file = r"E:\python_project\paper_project\deformable_detr_yolo\yolo_sign3\classes.txt"
-    # test_imgdir = r"E:\python_project\paper_project\deformable_detr_yolo\yolo_sign3\images\val"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\sign_val"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\sign_small\best_checkpoint.pth"
-
-    # class_file = r'E:\python_project\machine_learning01\DetectionTransformer\classes_coco.txt'
-    # test_imgdir = r"E:\python_project\machine_learning01\DetectionTransformer\assets"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\assets_box"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\coco_small\best_checkpoint.pth"
-
-    # class_file = r'E:\python_project\machine_learning01\DetectionTransformer\classes_coco.txt'
-    # test_imgdir = r"E:\python_project\machine_learning01\DetectionTransformer\assets"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\assets_box"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\pretrained\best_checkpoint.pth"
-
-    # class_file = r'E:\python_project\machine_learning01\DetectionTransformer\classes_coco.txt'
-    # test_imgdir = r"E:\python_project\machine_learning01\DetectionTransformer\images\test"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\coco_small"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\pretrained\best_checkpoint.pth"
-
-    # china road damage motobike, num_classes=5
-    # class_file = r'E:\python_project\paper_project\gated_fine_dino\china_road_motobike_damage\classes.txt'
-    # test_imgdir = r"E:\python_project\paper_project\gated_fine_dino\china_road_motobike_damage\images\test"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\road_damage_china_motobike"
-    # model_path = r'E:\python_project\paper_project\AFSS_DINO\results\road_damage_china_motobike\best_checkpoint.pth'
-
-    # china road damage drone, num_classes=6
-    # class_file = r'E:\python_project\paper_project\gated_fine_dino\china_road_drone_damage\classes.txt'
-    # test_imgdir = r"E:\python_project\paper_project\gated_fine_dino\china_road_drone_damage\images\test"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\road_damage_china_drone"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\road_damage_drone_china\best_checkpoint.pth"
-
-    # Noway road damage, num_classes=4
-    # class_file = r"E:\python_project\machine_learning02\DEIM-main\DamageTrain\classes.txt"
-    # test_imgdir =  r"E:\python_project\machine_learning02\DEIM-main\DamageVal\images"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\road_damage_Noway"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\road_damage_Noway\best_checkpoint.pth"
-
-    # road damage 2classes, num_classes=2
-    # class_file = r"E:\python_project\paper_project\gated_fine_dino\road_damage_2class\classes.txt"
-    # test_imgdir =  r"E:\python_project\paper_project\gated_fine_dino\road_damage_2class\images\test"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\road_damage_2class"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\road_damage_2class\best_checkpoint.pth"
-    
-    # road damage potholes, num_classes=2 
-    # class_file = r"E:\python_project\paper_project\pothole_imgs\classes.txt"
-    # test_imgdir = r"E:\python_project\paper_project\AFSS_DINO\pothole_damage\images\test"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\damage_potholes"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\road_damage_pothole\best_checkpoint.pth"
-
-    # class_file = r"E:\python_project\paper_project\pothole_imgs\classes.txt"
-    # test_imgdir = r"E:\python_project\paper_project\gated_fine_dino\test_pothole"
-    # predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\test_potholes"
-    # model_path = r"E:\python_project\paper_project\AFSS_DINO\results\road_damage_pothole\best_checkpoint.pth"
-
-    class_file = r'E:\python_project\machine_learning01\DetectionTransformer\classes_coco.txt'
-    test_imgdir = r"E:\python_project\machine_learning01\DetectionTransformer\assets"
-    predict_pic_dir = r"E:\python_project\paper_project\AFSS_DINO\predict\assets_box"
-    model_path = r"E:\python_project\paper_project\AFSS_DINO\results\coco_tiny\best_checkpoint.pth"
+    class_file = "your/path/to/classes.txt'
+    test_imgdir = "your/path/to/predict/images"
+    predict_pic_dir = "your/path/to/predict/output/images"
+    model_path = "your/model/path/to/best_checkpoint.pth"
 
     # 模型参数配置
     num_classes = 80
     num_queries = 300
-    gate_attn = True # 是否使用门控自注意力机制
+    gate_attn = True # 是否使用门控注意力机制
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     dict_unormalize_file = predict_func(

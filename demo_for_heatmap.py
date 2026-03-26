@@ -8,20 +8,15 @@ import matplotlib.pyplot as plt
 
 # 训练好后做推理的热力图绘制
 if __name__ == '__main__':
-    # coco数据集
-    imgdir_path = r"E:\python_project\machine_learning01\DetectionTransformer\images\train"
-    # pothole数据集
-    # imgdir_path = r"pothole_damage\images\combine_train"
+    # 数据集配置路径
+    imgdir_path = "your/path/to/images"
     batch_size = 4
 
-    # mydataset = PredictDataset_for_DETR(imgdir_path, image_set="val", max_size=1333, val_size=800)
     mydataset = PredictDataset_for_DETR(imgdir_path, image_set="val", max_size=640, val_size=640)
     mydataloader = DataLoader(mydataset, batch_size=batch_size, shuffle=False, collate_fn=collate_fn, num_workers=0, pin_memory=True)
     model = GatedAttention_FineGrained_DINO_Swin(num_queries=300, num_classes=80, gate_attn=True).cuda()
-    # model = GatedAttention_FineGrained_DINO_Swin(num_queries=300, num_classes=2, gate_attn=True).cuda()
     # load checkpoint
-    checkpoint_path = r"results\coco_tiny\best_checkpoint.pth"
-    # checkpoint_path = r"results\road_damage_pothole\best_checkpoint.pth"
+    checkpoint_path = "your/model/path/to/best_checkpoint.pth"
     checkpoint = torch.load(checkpoint_path, map_location="cuda")
     model_weights = checkpoint['ema_state_dict']['module']
     model.load_state_dict(model_weights)
